@@ -32,3 +32,17 @@ double CalculateScholarship(double baseAmount, double bonusPercent)
 
 double result = CalculateScholarship(2000, 15);
 Console.WriteLine(result);
+
+double CalculateAverageGrade(int[] grades)
+{
+    int sum = 0;
+    foreach (int grade in grades)
+    {
+        sum += grade;
+    }
+    return (double)sum / grades.Length;
+}
+
+int[] grades = { 4, 5, 3, 5, 4 };
+double average = CalculateAverageGrade(grades);
+Console.WriteLine(average);
