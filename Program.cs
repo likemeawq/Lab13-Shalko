@@ -1,48 +1,105 @@
-﻿PrintHeader();
-PrintHeader();
-Console.WriteLine("Основная часть программы");
-PrintFooter();
+﻿// PrintHeader();
+// PrintHeader();
+// Console.WriteLine("Основная часть программы");
+// PrintFooter();
 
-void PrintHeader()
+// void PrintHeader()
+// {
+//     Console.WriteLine("^_^");
+//     Console.WriteLine("Лабораторная работа №13");
+//     Console.WriteLine("0_0");
+// }
+
+// void PrintFooter()
+// {
+//     Console.WriteLine(">_<");
+//     Console.WriteLine("   Конец программы");
+//     Console.WriteLine("X_X");
+// }
+
+// void PrintStudentCard(string name, int age)
+// {
+//     Console.WriteLine($"Студент: {name}, возраст: {age}");
+// }
+
+// PrintStudentCard("Егор", 18);
+// PrintStudentCard("Валерия", 17);
+
+// double CalculateScholarship(double baseAmount, double bonusPercent)
+// {
+//     return baseAmount + baseAmount * bonusPercent / 100;
+// }
+
+// double result = CalculateScholarship(2000, 15);
+// Console.WriteLine(result);
+
+// double CalculateAverageGrade(int[] grades)
+// {
+//     int sum = 0;
+//     foreach (int grade in grades)
+//     {
+//         sum += grade;
+//     }
+//     return (double)sum / grades.Length;
+// }
+
+// int[] grades = { 4, 5, 3, 5, 4 };
+// double average = CalculateAverageGrade(grades);
+// Console.WriteLine(average);
+
+
+
+
+// Console.WriteLine("Первый блок текста");
+// PrintDivider();
+// Console.WriteLine("Второй блок текста");
+// PrintDivider();
+// Console.WriteLine("Третий блок текста");
+// void PrintDivider()
+// {
+//     Console.WriteLine("----------------");
+// }
+
+// PrintPerson("Алексей", 17);
+// PrintPerson("Мария", 18);
+// PrintPerson("Иван", 19);
+// void PrintPerson(string name, int age)
+// {
+//     Console.WriteLine($"Имя: {name}, Возраст: {age} лет");
+// }
+
+
+
+int myNumber = 5;
+if (IsPositive(myNumber))
 {
-    Console.WriteLine("^_^");
-    Console.WriteLine("Лабораторная работа №13");
-    Console.WriteLine("0_0");
+    Console.WriteLine($"Число {myNumber} — положительное!");
 }
-
-void PrintFooter()
+else
 {
-    Console.WriteLine(">_<");
-    Console.WriteLine("   Конец программы");
-    Console.WriteLine("X_X");
+    Console.WriteLine($"Число {myNumber} — отрицательное или ноль.");
 }
-
-void PrintStudentCard(string name, int age)
+bool IsPositive(int number)
 {
-    Console.WriteLine($"Студент: {name}, возраст: {age}");
-}
-
-PrintStudentCard("Егор", 18);
-PrintStudentCard("Валерия", 17);
-
-double CalculateScholarship(double baseAmount, double bonusPercent)
-{
-    return baseAmount + baseAmount * bonusPercent / 100;
-}
-
-double result = CalculateScholarship(2000, 15);
-Console.WriteLine(result);
-
-double CalculateAverageGrade(int[] grades)
-{
-    int sum = 0;
-    foreach (int grade in grades)
+    if (number > 0)
     {
-        sum += grade;
+        return true;
     }
-    return (double)sum / grades.Length;
+    else
+    {
+        return false;
+    }
 }
 
-int[] grades = { 4, 5, 3, 5, 4 };
-double average = CalculateAverageGrade(grades);
-Console.WriteLine(average);
+
+double myWeight = 70.5;
+double myHeight = 1.75;
+
+double bmi = CalculateBmi(myWeight, myHeight);
+
+Console.WriteLine($"При весе {myWeight} кг и росте {myHeight} м индекс массы тела равен: {bmi:F2}");
+double CalculateBmi(double weight, double heightMeters)
+{
+    double result = weight / (heightMeters * heightMeters);
+    return result;
+}
